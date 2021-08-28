@@ -1,5 +1,6 @@
 // varibles
-let cheeseCount = 0;
+let cheeseCount = 0
+let autoCollect = 0
 
 // dictionaries
 let inventory = {
@@ -13,13 +14,13 @@ let inventory = {
         type: 'click',
         price: 5,
         quantity: 0,
-        multiplier: 3
+        multiplier: 4
     },
     carts: {
         type: 'auto',
         price: 2,
         quantity: 0,
-        multiplier: 4
+        multiplier: 3
     },
     graters: {
         type: 'auto',
@@ -37,39 +38,37 @@ function mine() {
 }
 
 function buyitem(key) {
-    let item = inventory[key].price
-    inventory[key].quantity++
-        cheeseCount -= item
-    console.log(cheeseCount)
-        //  FIXME: come back to this anf fix the disable feature
-    if (cheeseCount <= 0) {
-        document.getElementById('disable').classList.add('disable')
-        alert("you are going in the wrong way collect more cheese please")
-    } else if (cheeseCount >= 0) {
+    let item = inventory[key]
+    if (cheeseCount >= item.price) {
+        inventory[key].quantity++
+            cheeseCount -= item.price
+        item.price *= 2
         document.getElementById('disable').classList.add('enable')
     }
-
     drawInventory()
-    statsMultiplier()
+    drawStore()
+    drawStats()
     document.getElementById('cheese').innerText = cheeseCount.toString();
 }
 
-function statsMultiplier() {
+function collectClickUpgrades() {
     for (let key in inventory) {
         let item = inventory[key]
-        item.multipler += Math.floor(item.multiplier * item.quantity)
-        console.log(item.multipler)
-
+        if (item.type === 'click') {
+            Math.floor(cheeseCount += item.multiplier * item.quantity)
+        }
     }
-
+    document.getElementById('cheese').innerText = cheeseCount.toString();
 }
 
 function collectAutoUpgrades() {
-
-
-    setInterval(collectAutoUpgrades, 3000);
-    console.log('collect')
-
+    for (let key in inventory) {
+        let item = inventory[key]
+        if (item.type === 'auto') {
+            Math.floor(cheeseCount += item.multiplier * item.quantity)
+        }
+    }
+    document.getElementById('cheese').innerText = cheeseCount.toString();
 }
 
 
@@ -124,6 +123,18 @@ function drawStore() {
 // .classList.add('disable')
 // .toggleAttribute('disable', true)
 // const btn = document.getElementById('disabled')
+// function statsMultiplier() {
+//     for (let key in inventory) {
+//         let item = inventory[key]
+//         item.multiplier += Math.floor(item.multiplier * item.quantity)
+//         console.log(item.multiplier)
+//     }
+// }
+// collectAutoUpgrades()
+//     //  FIXME: come back to this and fix the disable feature
+//     document.getElementById('disable').classList.add('disable')
+//     alert("you are going in the wrong way collect more cheese please")
+// } else if (cheeseCount >= 0) {
 
 
 
@@ -131,4 +142,4 @@ function drawStore() {
 drawStats()
 drawInventory()
 drawStore()
-collectAutoUpgrades()
+setInterval(collectAutoUpgrades, 3000);
