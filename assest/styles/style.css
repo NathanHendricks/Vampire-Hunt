@@ -1,0 +1,11 @@
+.disable {
+    pointer-events: none;
+    background-color: #808080!important;
+    border-radius: 4rem;
+}
+
+.enable {
+    pointer-events: auto;
+    background-color: bg-info;
+    border-radius: 4rem;
+}

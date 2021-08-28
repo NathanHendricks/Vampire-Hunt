@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assest/styles/style.css">
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row  text-center justify-content-center align-items-center">
+            <div class="col">
+                <!-- header goes here -->
+                <h1>title</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col-lg-4">
+                <h4>Upgrade Multiplier</h4>
+                <!-- stats card goes here -->
+                <div id="stats">
+                </div>
+            </div>
+            <div class="col-lg-4 btn:disabled">
+                <img disabled onclick="mine()" src="//placehold.it/200x200" alt="moon">
+            </div>
+            <div class="col-lg-4">
+                <h4>Inventory</h4>
+                <p> Cheese: <span id="cheese">0</span> </p>
+                <div id="inventory"></div>
+
+                <!-- inventory goes here -->
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-6">
+                <!-- store goes here -->
+                <div class="row p-3 my-2 text-center justify-content-bewteen">
+                    <div class="col-lg-12">
+                        <h5>click upgrades</h5>
+                    </div>
+                    <!-- knives and miners -->
+                    <div id="store-click" class="col">
+                    </div>
+                </div>
+                <div class="row p-3 my-2 text-center justify-content-bewteen">
+                    <div class="col-lg-12">
+                        <h5>auto upgrades</h5>
+                    </div>
+                    <!-- carts and graters -->
+                    <div id="store-auto" class="col">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col">
+                <!-- footer goes here -->
+                footer
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="./app/main.js"></script>
+</body>
+
+</html>
