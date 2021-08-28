@@ -7,25 +7,25 @@ let inventory = {
         type: 'click',
         price: 1,
         quantity: 0,
-        multiplier: 1.1
+        multiplier: 2
     },
     miners: {
         type: 'click',
         price: 5,
         quantity: 0,
-        multiplier: 1.15
+        multiplier: 3
     },
     carts: {
         type: 'auto',
         price: 2,
         quantity: 0,
-        multiplier: 1.2
+        multiplier: 4
     },
     graters: {
         type: 'auto',
         price: 3,
         quantity: 0,
-        multiplier: 1.25
+        multiplier: 5
     }
 }
 
@@ -64,12 +64,21 @@ function statsMultiplier() {
 
 }
 
+function collectAutoUpgrades() {
+
+
+    setInterval(collectAutoUpgrades, 3000);
+    console.log('collect')
+
+}
+
+
 function drawStats() {
     let template = ''
     for (let key in inventory) {
         let item = inventory[key]
         template += /*html*/ `
-    <p> ${key} <span>${item.multiplier} </span></p>`
+    <p> ${key} : x<span>${item.multiplier} </span></p>`
     }
     document.getElementById('stats').innerHTML = template
 }
@@ -122,3 +131,4 @@ function drawStore() {
 drawStats()
 drawInventory()
 drawStore()
+collectAutoUpgrades()
