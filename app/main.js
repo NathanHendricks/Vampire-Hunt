@@ -35,6 +35,8 @@ let inventory = {
 function mine() {
     cheeseCount++
     document.getElementById('cheese').innerText = cheeseCount.toString();
+    collectClickUpgrades()
+    collectAutoUpgrades()
 }
 
 function buyitem(key) {
