@@ -4,54 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="Vampire Hunt" content="width=device-width, initial-scale=1.0">
+    <title class="title-theme">Vampire Hunt</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assest/styles/style.css">
 </head>
 
-<body>
-    <header class="container-fluid">
+<body class="hero-img">
+    <header class="container-fluid text-white">
         <div class="row  text-center justify-content-center align-items-center">
             <div class="col">
                 <!-- header goes here -->
-                <h1>title</h1>
+                <h1 class="title-theme">Casltevaina Vampire Hunt</h1>
             </div>
         </div>
     </header>
-    <main class="container-fluid">
-        <div class="row text-center justify-content-center align-items-center">
-            <div class="col-lg-4">
-                <h4>Upgrade Multiplier</h4>
+    <main class="container">
+        <div class="row text-center text-white my-2 p-5">
+            <div class="col-lg-4 card">
+                <h4 class="main-theme">Upgrade Multiplier</h4>
                 <!-- stats card goes here -->
                 <div id="stats">
                 </div>
             </div>
-            <div class="col-lg-4 btn:disabled">
-                <img disabled onclick="mine()" src="//placehold.it/200x200" alt="moon">
+            <div class="col-lg-4 align-item-center justify-content-center" oncontextmenu="preventContext()">
+                <img disabled onclick="mine()" class="holy-water-img" src="https://w7.pngwing.com/pngs/310/999/png-transparent-glass-bottle-vase-holy-water-vase-glass-teal-video-game.png" alt="Holy Water">
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 card">
                 <h4>Inventory</h4>
-                <p> Cheese: <span id="cheese">0</span> </p>
+                <p class="main-theme"> Holy Water: <span id="cheese">0</span> </p>
                 <div id="inventory"></div>
 
                 <!-- inventory goes here -->
             </div>
         </div>
-        <div class="row text-center">
+        <div class="row m-0 text-center text-white">
             <div class="col-lg-6">
                 <!-- store goes here -->
-                <div class="row p-3 my-2 text-center justify-content-bewteen">
+                <div class="row p-3 m-5 text-center justify-content-bewteen text-white card">
                     <div class="col-lg-12">
-                        <h5>click upgrades</h5>
+                        <h5 class="main-theme">Upgrades</h5>
                     </div>
                     <!-- knives and miners -->
                     <div id="store-click" class="col">
                     </div>
                 </div>
-                <div class="row p-3 my-2 text-center justify-content-bewteen">
+                <div class="row p-3 m-5 text-center justify-content-bewteen text-white card ">
                     <div class="col-lg-12">
-                        <h5>auto upgrades</h5>
+                        <h5 class="main-theme">Auto Upgrades</h5>
                     </div>
                     <!-- carts and graters -->
                     <div id="store-auto" class="col">
@@ -61,10 +64,11 @@
         </div>
     </main>
     <footer class="container-fluid">
-        <div class="row text-center justify-content-center align-items-center">
+        <div class="row text-center justify-content-center align-items-center text-white">
             <div class="col">
                 <!-- footer goes here -->
-                footer
+                <p class="main-theme">Creator: Nathan Hendricks </p>
+                <p class="main-theme">All Rights Reserved: Alucard </p>
             </div>
         </div>
     </footer>

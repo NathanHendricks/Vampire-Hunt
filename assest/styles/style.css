@@ -6,6 +6,46 @@
 
 .enable {
     pointer-events: auto;
-    background-color: bg-info;
+    background-color: #c70f7d80!important;
+    box-shadow: 0px 0px 12px #f07dc2!important;
     border-radius: 4rem;
+}
+
+.title-theme {
+    font-family: 'Sacramento', cursive;
+}
+
+.main-theme {
+    font-family: 'VT323', monospace
+}
+
+.hero-img {
+    background-image: url(https://pbs.twimg.com/media/D3u6x_cWAAA8CPr.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.holy-water-img {
+    background-color: #ac251e80!important;
+    box-shadow: 0px 0px 12px #fa3d67!important;
+    background-image: inherit;
+    background-size: cover;
+    max-height: 75%;
+    max-width: 75%;
+    -webkit-user-drag: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.card {
+    background-color: #ffffff26;
+    box-shadow: 0px 0px 12px #2c232c!important;
+}
+
+.btn {
+    background: #ac251e80!important;
+    box-shadow: 0px 0px 12px #fa3d67!important;
+    backdrop-filter: (4px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 75%;
 }

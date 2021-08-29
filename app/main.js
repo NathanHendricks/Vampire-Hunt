@@ -4,27 +4,27 @@ let autoCollect = 0
 
 // dictionaries
 let inventory = {
-    knivies: {
+    Daggers: {
         type: 'click',
-        price: 1,
+        price: 25,
         quantity: 0,
         multiplier: 2
     },
-    miners: {
+    Rapiers: {
         type: 'click',
-        price: 5,
+        price: 100,
         quantity: 0,
         multiplier: 4
     },
-    carts: {
+    Axes: {
         type: 'auto',
-        price: 2,
+        price: 700,
         quantity: 0,
         multiplier: 3
     },
-    graters: {
+    Whips: {
         type: 'auto',
-        price: 3,
+        price: 1500,
         quantity: 0,
         multiplier: 5
     }
@@ -77,7 +77,7 @@ function drawStats() {
     for (let key in inventory) {
         let item = inventory[key]
         template += /*html*/ `
-    <p> ${key} : x<span>${item.multiplier} </span></p>`
+    <p class="main-theme"> ${key} : x<span>${item.multiplier} </span></p>`
     }
     document.getElementById('stats').innerHTML = template
 }
@@ -87,7 +87,7 @@ function drawInventory() {
     for (let key in inventory) {
         let item = inventory[key]
         template += /*html*/ ` 
-        <p> ${key}: <span id="${key}"> ${item.quantity} </span> </p>     
+        <p class="main-theme"> ${key}: <span id="${key}"> ${item.quantity} </span> </p>     
         `
     }
     document.getElementById('inventory').innerHTML = template
@@ -100,11 +100,11 @@ function drawStore() {
         let item = inventory[key]
         if (item.type == 'click') {
             clicktemplate += /*html*/ `
-        <p> ${key}: <button id="disable" type="btn" class="bg-info" onclick="buyitem('${key}')">${item.price}</button></p>
+        <button id="disable" type="btn" class="bg-info btn text-white text-center main-theme" onclick="buyitem('${key}')"><p> ${key}: ${item.price} </p></button>
         `
         } else {
             autotemplate += /*html*/ `
-        <p> ${key}: <button id="disable" type="btn" class="bg-info" onclick="buyitem('${key}')">${item.price}</button></p>
+        <button id="disable" type="btn" class="bg-info btn text-white text-center main-theme" onclick="buyitem('${key}')"><p> ${key}: ${item.price} </p></button>
         `
         }
     }
@@ -113,6 +113,10 @@ function drawStore() {
     document.getElementById('store-auto').innerHTML = autotemplate
 }
 
+
+function preventContext() {
+    event.preventDefault()
+}
 // code graveyard
 // btn.addEventListener("click", drawStore())
 // if (cheeseCount === 0) {
