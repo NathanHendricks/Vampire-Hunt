@@ -16,7 +16,8 @@
 }
 
 .main-theme {
-    font-family: 'VT323', monospace
+    font-family: 'VT323', monospace;
+    font-size: 16pt;
 }
 
 .hero-img {
@@ -46,6 +47,5 @@
     background: #ac251e80!important;
     box-shadow: 0px 0px 12px #fa3d67!important;
     backdrop-filter: (4px);
-    /* Note: backdrop-filter has minimal browser support */
     border-radius: 75%;
 }
